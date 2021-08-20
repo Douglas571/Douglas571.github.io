@@ -1,0 +1,20 @@
+{
+  "name": "f",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy-navigation": "^0.3.2"
+  },
+  "dependencies": {
+    "milligram": "^1.4.1",
+    "tailwindcss": "^2.2.7"
+  }
+}

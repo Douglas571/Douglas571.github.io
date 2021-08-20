@@ -1,0 +1,24 @@
+---
+title: Proyectos
+order: 30
+
+layout: main
+
+tags:
+ - mainNav
+---
+
+<h1>{{ title }}</h1>
+
+<section>
+    {% for oneProject in projects %}   
+        <article>
+            <h1>{{ oneProject.name }}</h1>
+            <p><b>Descripción: </b> {{ oneProject.description }}</p>
+            <p><b>Prósito: </b> {{ oneProject.purpose }}</p>
+            <a href="{{ oneProject.github }}">github repo</a>
+        </article>
+    {% endfor %}
+</section>
+
+
