@@ -11,15 +11,20 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
 
     steps:
-      - run: npm i
 
       - uses: actions/checkout@v2
 
-      - name: Build
-        uses: TartanLlama/actions-eleventy@v1.1          
+      - name: Prepaire node.js ${{ matrix.node-version }}
+      - use: actions/setup-node@v2
+        with: 
+          node-version ${{ matrix.node-version }}
+
+      - name: Install dependencies & build
+        run: npm ci 
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
