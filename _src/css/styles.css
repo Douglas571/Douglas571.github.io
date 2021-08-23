@@ -1,34 +1,66 @@
 :root {
-  
+    --main-font:  "Perpetua", "Helvetica", "Rockwell";
+    --sec-font:  "Segoe UI";;
+}
+
+* {
+  margin:  0;
+  padding:  0;
 }
 
 html {
-  box-sizing: b;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family:  var(--main-font);
 }
 
 body {
-  font-size: 16px;
-  margin: 10px 15%;
-  text-align: justify;
-
-  font-family: sans-serif;
+  
 }
 
-h1,
-h2,
-h3, 
-h4,
-h5,
-h6 {
-  margin-top: 1.5em;
-  margin-bottom: .2em;
+.warning {
+  text-align: center;
+  color: #333333;
+
+  padding: .3rem;
+  background: yellow;
+  border: 3px dashed #333333;
+
+  /* display: none; */
 }
 
-h1 + h2 {
-	font-size: 1rem;
+#header {
+  margin: 1rem;
+
+  display: flex;
+
+  flex-flow: column wrap;
+  align-items: space-around;
 }
 
-p {
-  margin-top: 0rem;
-  margin-bottom: .5rem;
+#header .logo {
+  padding-left: 2rem;
+  align-self: center;
+}
+
+#header #nav-menu {
+  flex-wrap: wrap;
+}
+
+#nav-menu ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+#nav-menu ul li {
+  list-style: none;
+}
+
+#homepage {
+
+}
+
+#footer {
+
 }

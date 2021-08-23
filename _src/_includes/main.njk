@@ -10,26 +10,29 @@
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <h4>!Este sitio está en construcción!... pero igual puedes pasar y ver :D</h4>
-        <h1>Douglas JC</h1>
+    <h4 class="warning">!Este sitio está en construcción!... pero igual puedes pasar y ver :D</h4>
+    <header id="header">
+        <h1 class="logo">Douglas JC</h1>
+
+        <nav id="nav-menu">
+            <ul>
+                {% for p in collections.forMainNav %}
+                    <li>
+                        {% if page.url !== p.url %}
+                            <a href="{{ p.url }}">{{ p.data.title }}</a>
+                        {% else %}
+                            {{ p.data.title }}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            {% for p in collections.forMainNav %}
-                <li>
-                    {% if page.url !== p.url %}
-                        <a href="{{ p.url }}">{{ p.data.title }}</a>
-                    {% else %}
-                        {{ p.data.title }}
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
+
     <main>
         {{ content | safe }}
     </main>
-    <footer></footer>
+
+    <footer id="footer"></footer>
 </body>
 </html>
