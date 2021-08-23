@@ -1,5 +1,5 @@
 :root {
-    --main-font:  "Perpetua", "Helvetica", "Rockwell";
+    --main-font:  "Calibri", "Perpetua", "Helvetica", "Rockwell";
     --sec-font:  "Segoe UI";;
 }
 
@@ -29,6 +29,10 @@ body {
   /* display: none; */
 }
 
+main {
+  margin:  1rem;
+}
+
 #header {
   margin: 1rem;
 
@@ -49,16 +53,40 @@ body {
 
 #nav-menu ul {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
+
   margin-top: 1rem;
 }
 
 #nav-menu ul li {
+  text-align: center;
+
+  margin: .2rem;
+
+  display: inline-block;
+  flex: 1 auto;
   list-style: none;
 }
 
-#homepage {
+#nav-menu ul li a:link{
+  text-decoration: none;
+}
 
+#nav-menu ul li a:visited{
+  text-decoration: none;
+}
+
+#homepage h1{
+  font-size: 2rem;
+  line-height: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+#homepage h2{
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 #footer {
