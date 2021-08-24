@@ -15,13 +15,22 @@ tags:
 	
 ---
 
-<h1>Datos de {{ title }}</h1>
+<div class="container">
+	
+	<h1>Datos de {{ title }}</h1>
 
-<section>
-		<h3>Teléfono: {{ phone }} </h3>
-
-		<h3>E-mail: {{ email }} </h3>
-
-		<h3>Github: <a href="{{ github }}">{{ github }}</a> </h3>
-
-</section>
+	<section>
+			<p>
+	            <b>Teléfono: </b> {{ phone }}</br>
+	            <b>E-mail: </b> {{ email }}</br>
+	            <a href="{{ github }}">
+	            	<img 
+	                    height="32" 
+	                    width="32" 
+	                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg"
+	                    alt="Ver en github"
+	                />
+	            </a>
+	        </p>
+	</section>
+</div>
