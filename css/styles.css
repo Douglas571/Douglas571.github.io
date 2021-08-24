@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  
+  background: #f0f0f0;  
 }
 
 .warning {
@@ -118,17 +118,33 @@ h3 {
 
 article {
   padding: 1rem 0;
+  border-bottom: 2px solid #666666;
 }
 
 /*--------------sub styles --------------------*/
+
 .header-with-icons {
+  padding-bottom: 1rem;
   display: flex;
 }
 
 .header-with-icons h2 {
+  flex: 2;
+  justify-self: end;
 }
 
-.header-with-icons div {
+.header-with-icons div{
+  flex: 1;
+  display: flex;
+}
+
+.header-with-icons a{
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 320px) {
+
 }
 
 /*--------------some usefull styles------------*/
