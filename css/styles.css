@@ -1,34 +1,141 @@
 :root {
-  
+    --main-font:  "Calibri", "Perpetua", "Helvetica", "Rockwell";
+    --sec-font:  "Segoe UI";;
+}
+
+* {
+  margin:  0;
+  padding:  0;
 }
 
 html {
-  box-sizing: b;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family:  var(--main-font);
 }
 
 body {
-  font-size: 16px;
-  margin: 10px 15%;
-  text-align: justify;
-
-  font-family: sans-serif;
+  
 }
 
-h1,
-h2,
-h3, 
-h4,
-h5,
-h6 {
-  margin-top: 1.5em;
-  margin-bottom: .2em;
+.warning {
+  text-align: center;
+  color: #333333;
+
+  padding: .3rem;
+  background: yellow;
+  border: 3px dashed #333333;
+
+  /* display: none; */
+}
+
+main {
+
+}
+
+#header {
+  margin: 1rem;
+
+  display: flex;
+
+  flex-flow: column wrap;
+  align-items: space-around;
+}
+
+#header .logo {
+  align-self: center;
+
+
+}
+
+#nav-menu {
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+#nav-menu ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+}
+
+#nav-menu ul li {
+  text-align: center;
+
+  margin: .2rem;
+
+  display: inline-block;
+  flex: 1 auto;
+  list-style: none;
+}
+
+a:link{
+  color: black; 
+  text-decoration: none;
+}
+
+a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+
+  margin-bottom: 1rem;
 }
 
 h1 + h2 {
-	font-size: 1rem;
+  margin-top: -.5rem;
+  color: #777777;
+}
+
+h3 {
+  margin-bottom: .5rem;
+}
+
+#homepage h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#gretting {
+  padding: 2rem;
+}
+
+#contact-home-section {
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer {
+
+}
+
+article {
+  padding: 1rem 0;
+}
+
+/*--------------some usefull styles------------*/
+.container {
+  padding: 2rem;
+  padding-top: 1rem;
 }
 
 p {
-  margin-top: 0rem;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.t-indent {
+  text-indent: 1rem;
+}
+
+.t-center {
+  text-align: center;
 }
