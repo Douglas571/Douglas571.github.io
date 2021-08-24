@@ -14,10 +14,14 @@ tags:
     <section>
         {% for oneProject in projects %}   
             <article>
-                <h2>{{ oneProject.name }}</h2>
-                <p><b>Descripción: </b> {{ oneProject.description }}</p>
-                <p><b>Prósito: </b> {{ oneProject.purpose }}</p>
-                Ver en <a href="{{ oneProject.github }}">github</a>
+                <header class="header-with-icons">
+                    <h2>{{ oneProject.name }}</h2>
+                    <div class="">Ver en <a href="{{ oneProject.github }}">github</a></div>
+                </header>
+                <p>
+                    <b>Descripción: </b> {{ oneProject.description }}</br>
+                    <b>Prósito: </b> {{ oneProject.purpose }}</br>
+                </p>
             </article>
         {% endfor %}
     </section>

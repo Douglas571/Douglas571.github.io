@@ -9,6 +9,6 @@
 		"name": "Lyric-finder",
 		"description": "Aplicación de linea de comandos para la descarga de letras de canciones",
 		"purpose": "Experimentar con el web-scraping y la generación de archivos EPUB y PDF, así como el manejo de archivos en disco.",
-		"github": "https://github.com/Douglas571/lyric-finder"
+		"github": "https://github.com/Douglas571/lyrics-downloader"
 	}
 ]
