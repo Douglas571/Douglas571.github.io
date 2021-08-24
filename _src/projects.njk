@@ -16,7 +16,13 @@ tags:
             <article>
                 <header class="header-with-icons">
                     <h2>{{ oneProject.name }}</h2>
-                    <div class="">Ver en <a href="{{ oneProject.github }}">github</a></div>
+                    <a href="{{ oneProject.github }}">
+                        <img 
+                            height="32" 
+                            width="32" 
+                            src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg"
+                            alt="Ver en github">
+                    </a>
                 </header>
                 <p>
                     <b>Descripción: </b> {{ oneProject.description }}</br>
