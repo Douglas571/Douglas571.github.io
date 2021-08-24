@@ -1,14 +1,14 @@
 [
 	{
-		"name": "mongodb-inventory-app",
+		"name": "Mongodb-inventory-app",
 		"description": "Una aplicación CRUD de linea de comandos para la gestion de inventario, que usa MongoDB",
 		"purpose": "Estudiar y poner en practica las diversas caracteristicas de la base de datos noSQL(nosiquel) MongoDB.",
 		"github": "https://github.com/Douglas571/mongo-inventory-app"
 	},
 	{
-		"name": "lyric-finder",
+		"name": "Lyric-finder",
 		"description": "Aplicación de linea de comandos para la descarga de letras de canciones",
 		"purpose": "Experimentar con el web-scraping y la generación de archivos EPUB y PDF, así como el manejo de archivos en disco.",
-		"github": "https://github.com/Douglas571/lyric-down"
+		"github": "https://github.com/Douglas571/lyric-finder"
 	}
 ]
