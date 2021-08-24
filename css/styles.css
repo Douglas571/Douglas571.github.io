@@ -34,12 +34,11 @@ main {
 }
 
 #header {
-  margin: 1rem;
+  padding-top: 1rem;
 
   display: flex;
 
   flex-flow: column wrap;
-  align-items: space-around;
 }
 
 #header .logo {
@@ -121,6 +120,17 @@ article {
   padding: 1rem 0;
 }
 
+/*--------------sub styles --------------------*/
+.header-with-icons {
+  display: flex;
+}
+
+.header-with-icons h2 {
+}
+
+.header-with-icons div {
+}
+
 /*--------------some usefull styles------------*/
 .container {
   padding: 2rem;
@@ -138,4 +148,8 @@ p {
 
 .t-center {
   text-align: center;
+}
+
+.t-right {
+  text-align: right;
 }
