@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background: #f0f0f0;  
+  background: white;  
 }
 
 .warning {
@@ -84,8 +84,12 @@ a:link{
 }
 
 a:visited{
-  color: black;
+  color: green;
   text-decoration: none;
+}
+
+a {
+  color: lightgreen;
 }
 
 h1 {
@@ -128,6 +132,20 @@ h3 {
 article {
   padding: 1rem 0;
   border-bottom: 2px solid #666666;
+}
+
+pre {
+  padding-bottom: 1rem;
+  overflow-x: scroll;
+}
+
+.post ol, ul {
+  padding-left: 1.5rem;
+}
+
+.post ol p{
+  padding: 0;
+  margin: 0;
 }
 
 /*--------------sub styles --------------------*/
