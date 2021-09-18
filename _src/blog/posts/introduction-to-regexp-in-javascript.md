@@ -7,6 +7,10 @@
     author: Douglas Socorro
     date: 2021-09-19
 
+    social_description: Las expresiones regulares, regexp o regex del inglés (Regular Expressions), son un método usado para describir un patrón de caracteres, que luego serán identificados en una cadena de texto.
+    social_cover: regexp.jpg
+    social_cover_alt: regular expressions in a screen
+
     tags: posts
     layout: post
 ---
