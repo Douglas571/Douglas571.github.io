@@ -6,3 +6,13 @@ tags: mainNav
 
 layout: main
 ---
+
+<div class="container">
+    <h1>Blog</h1>
+    <h2>Ultimas entradas</h2>
+    <ul>
+    {% for post in collections.posts %}
+        <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
