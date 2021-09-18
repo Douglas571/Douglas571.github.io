@@ -5,6 +5,7 @@
         - Javascript
 
     author: Douglas Socorro
+    date: 2021-09-19
 
     tags: posts
     layout: post
@@ -157,10 +158,6 @@ Estos dos métodos están implementados alrededor del método **[exec](https://d
 <h2 id="modificando-cadenas">Modificando Cadenas</h2>
 
 Otro uso bastante potente para las expresiones regulares es la modificación de textos con **[replace](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)**; el lenguaje de las expresiones regulares establece una sintaxis en estos casos.
-
-```javascript
-
-```
 
 Podemos establecer cómo debe de quedar la porción de cadena emparejada, pasando como segundo parámetro una cadena de texto, y mediante el signo $ podemos formatear la nueva cadena: $& hará referencia a la cadena completa y con $1, ..., $9 accederemos a los grupos de captura definidos en la expresión regular.
 
