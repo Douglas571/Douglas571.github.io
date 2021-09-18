@@ -177,8 +177,6 @@ let arrayOfMatches = Array.from(multipleScreens.matchAll(screenSizePatternGlobal
 <p>Estos dos métodos están implementados alrededor del método <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec">exec</a></strong> de la clase RegExp, el cual es un poco confuso y es preferible evitarlo, en pro de match y matchAll.</p>
 <h2 id="modificando-cadenas">Modificando Cadenas</h2>
 <p>Otro uso bastante potente para las expresiones regulares es la modificación de textos con <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace</a></strong>; el lenguaje de las expresiones regulares establece una sintaxis en estos casos.</p>
-<pre><code class="language-javascript">
-</code></pre>
 <p>Podemos establecer cómo debe de quedar la porción de cadena emparejada, pasando como segundo parámetro una cadena de texto, y mediante el signo $ podemos formatear la nueva cadena: $&amp; hará referencia a la cadena completa y con $1, ..., $9 accederemos a los grupos de captura definidos en la expresión regular.</p>
 <pre><code class="language-javascript">let names = &quot;Liskov, Barbara\nMcCarthy, John\nWadler, Philip&quot;.replace(/(\w+), (\w+)/g, &quot;$&amp; -&gt; $2 $1&quot;)
 
