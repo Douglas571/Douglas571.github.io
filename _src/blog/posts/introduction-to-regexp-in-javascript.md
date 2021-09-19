@@ -9,7 +9,7 @@
 
     social_title: Introducción al Uso de Expresiones Regulares en Javascript
     social_description: Las expresiones regulares, regexp o regex del inglés (Regular Expressions), son un método usado para describir un patrón de caracteres, que luego serán...
-    social_cover: img/regexp.jpg
+    social_cover: /img/regexp.jpg
     social_cover_alt: regular expressions in a screen
 
     tags: posts
