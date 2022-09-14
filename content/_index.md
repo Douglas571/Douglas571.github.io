@@ -2,7 +2,7 @@
   
   title: Home
 
-  greeting: Hello!
-  presentation: "I'm a frontend developer, future system engineer (in 2024) that enjoy implementing complex web designs and animations."
+  greeting: Hi!
+  presentation: "I am a Frontend Developer, future System Engineer (in 2024) and enjoy implementing complex web designs with animations."
 
 ---
