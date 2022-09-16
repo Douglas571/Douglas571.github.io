@@ -3,7 +3,8 @@
       --text-weight: 600;
       --text-color: white;
 
-      --main-color: rgb(95,0,184);
+      --main-color: hsl(271deg 100% 36%);
+      --main-color-lighter: hsl(271 100% 58% / 1);
     }
 
     * {
@@ -71,7 +72,7 @@
   .navbar .logo {
     flex: 1;
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
 
     padding-left: 1rem;
@@ -126,7 +127,6 @@
     color: var(--text-color);
 
     position: fixed;
-    z-index: 1;
     top: 0;
 
     background: red;
