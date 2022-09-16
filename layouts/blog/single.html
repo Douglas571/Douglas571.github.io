@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree Serif|Roboto Slab">
+  
+
+  {{ $styles := resources.Get "styles.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
+
+  {{ $blog := resources.Get "blog.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $blog.Permalink }}">
+
+  <title>
+    {{ .Title }} - Douglas Socorro
+  </title>
+</head>
+<body>
+  <main class="page blog-post">
+    <h1 class="title">{{ .Title }}</h1>
+    {{ .Content }}
+    
+  </main>
+</body>
+</html>

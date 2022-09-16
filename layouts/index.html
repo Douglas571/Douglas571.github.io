@@ -7,10 +7,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
 
 
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+  {{ $styles := resources.Get "styles.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
+  
+
 </head>
 <body>
-  <div class="page">
+  <div class="home-page">
 
     <div class="mobil-navbar">
       <div class="close-button">
@@ -19,9 +22,9 @@
       <div class="content">
         <a class="logo">{{ .Site.Title }}</a>
         <ul class="links">
-        {{ range .Site.Sections }}
-          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </div>
     </div>
@@ -30,9 +33,9 @@
       <div class="navbar">
         <h1 class="logo">{{ .Site.Title }}</h1>
         <ul class="links">
-        {{ range .Site.Sections }}
-          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
         <div class="open-mobil-navbar">
           <img src="menu.svg">
@@ -42,11 +45,6 @@
       <div class="greeting visible">
         <h1 class="title">{{ .Params.Greeting }}</h1>
         <p class="message">{{ .Params.Presentation }}</p>
-        <p>
-          Do you have a design in mind?
-          <a class="action-link" href="/contact">Call me and bring it to life!</a>
-          
-        </p>
       </div>
     </div>
     
@@ -141,7 +139,7 @@
   const menuOpenButton = document.querySelector('.open-mobil-navbar')
   const menuCloseButton = document.querySelector('.mobil-navbar .close-button')
 
-  const page = document.querySelector('.page')
+  const page = document.querySelector('.home-page')
   const firstSection = document.querySelector('.first-section')
   const blogSection = document.querySelector('#blog-section')
   
