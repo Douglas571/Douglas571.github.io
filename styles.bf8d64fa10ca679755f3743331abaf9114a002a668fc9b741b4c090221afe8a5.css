@@ -41,16 +41,16 @@
     }
 
     body {
-      height: 100vh;
-      overflow: hidden;
     }
 
     .page {
+    }
+
+    .home-page {
       height: 100vh;
       overflow: scroll;
       scroll-snap-type: y mandatory;
     }
-
 
     .section {
       scroll-snap-align: start;
@@ -65,7 +65,7 @@
     /*position: sticky;
     top: 0;*/
 
-    align-items: center;
+    align-items: flex-start;    
   }
 
   .navbar .logo {
@@ -86,6 +86,8 @@
     gap: 1rem;
 
     font-size: calc(var(--text-size) * 1.5);
+
+    align-self: center;
   }
 
   .navbar .open-mobil-navbar img {
@@ -316,7 +318,7 @@
     display: flex;
     justify-content: center;
 
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
 
   }
@@ -333,7 +335,7 @@
   }
 
   .blog-post-items > .item .right .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
 

@@ -1,0 +1,51 @@
+.page {
+  background: hsl(0, 0%, 5%);
+  color: var(--text-color);
+
+  padding: 2rem;
+}
+
+.blog-post {
+  font-size: var(--text-size);
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.blog-post p,
+.blog-post ul,
+.blog-post ol {
+  margin-bottom: 1rem;
+}
+
+.blog-post .title {
+  font-family: "Bree Serif", Serif;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: calc(4rem - .4rem);
+
+  margin-bottom: 3rem;
+}
+
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+
+}
+
+.blog-post h2 {
+  line-height: calc(3rem - .3rem);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.blog-post h3 {
+  line-height: calc(3rem - .3rem);
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.blog-post .highlight {
+  margin-bottom: 2rem;
+}
