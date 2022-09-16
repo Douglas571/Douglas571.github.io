@@ -13,15 +13,48 @@
   {{ $blog := resources.Get "blog.css" | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $blog.Permalink }}">
 
+  {{ $syntax := resources.Get "syntax.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $syntax.Permalink }}">
+
   <title>
     {{ .Title }} - Douglas Socorro
   </title>
 </head>
 <body>
-  <main class="page blog-post">
-    <h1 class="title">{{ .Title }}</h1>
-    {{ .Content }}
+  <main class="page">
+    <div class="mobil-navbar">
+      <div class="close-button">
+        <img src="/x2.svg"/>
+      </div>
+      <div class="content">
+        <a class="logo">{{ .Site.Title }}</a>
+        <ul class="links">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="navbar">
+      <h1 class="logo">{{ .Site.Title }}</h1>
+      <ul class="links">
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <div class="open-mobil-navbar">
+        <img src="/menu.svg">
+      </div>
+    </div>
+
+    <div class="blog-post">
+      <h1 class="title">{{ .Title }}</h1>
+      {{ .Content }}  
+    </div>
     
   </main>
 </body>
+{{ $scripts := resources.Get "scripts.js" | resources.Fingerprint }}
+<script type="text/javascript" src="{{ $scripts.Permalink }}"></script>
 </html>
