@@ -6,7 +6,7 @@
 /* --- overwriting navbar --- */
 
 .navbar {
-  z-index: 1000;
+  z-index: 10;
   position: sticky;
   top: 0;
 
