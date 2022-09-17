@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Site.Title }}</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree Serif|Roboto Slab">
 
 
   {{ $styles := resources.Get "styles.css" | resources.Fingerprint }}
@@ -50,84 +51,60 @@
     
     <div id="blog-section" class="blog-section section">
 
-      {{ range .Site.Sections }}
-        {{ if eq .Title "Posts" }}
-          {{ . }}
-        {{ end}}
-      {{ end }}
-
       <h1 class="title">Lates articles</h1>
       <div class="blog-post-items">
-        <a class="item" href="/article">
-          <div class="left">
-            <div class="number">#3</div>
-            <div class="date">10-10-22</div>  
-          </div>
+        {{ range .Site.Sections }}
+          {{ if eq .Title "Blog" }}
+            {{ range first 3 .Pages.ByDate.Reverse }}
+              {{ if eq .Draft false }}
+                <div class="item" href="{{ .Permalink }}">
+                  <div class="content">
+                    <div>
+                      <div class="date">{{ .Date.Format "2006-01-02" }}</div>  
+                      <h1 class="title">{{ .Title }}</h1> 
+                    </div>
+                    <div><a href="{{ .Permalink }}">Read Article</a></div>
+                  </div>
+                </div>
+                <!-- end of item -->
+              {{ end }}
+            {{ end }}
+          {{ end}}
+        {{ end }}
+      </div>
 
-          <div class="right">
-            <div class="content">
-              <h1 class="title">Cloning WhatsApp with React and Web Tecnologies.</h1>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-            </div>
-
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Web Development</span>
-              <span class="tag">Cloning</span>
-              <span class="tag">Project</span>
-            </div>
-          </div>
-        </a>
-        <!-- end of item -->
-                <a class="item" href="/article">
-          <div class="left">
-            <div class="number">#3</div>
-            <div class="date">10-10-22</div>  
-          </div>
-
-          <div class="right">
-            <div class="content">
-              <h1 class="title">Cloning WhatsApp with React and Web Tecnologies.</h1>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-            </div>
-
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Web Development</span>
-              <span class="tag">Cloning</span>
-              <span class="tag">Project</span>
-            </div>
-          </div>
-        </a>
-        <!-- end of item -->
-                <a class="item" href="/article">
-          <div class="left">
-            <div class="number">#3</div>
-            <div class="date">10-10-22</div>  
-          </div>
-
-          <div class="right">
-            <div class="content">
-              <h1 class="title">Cloning WhatsApp with React and Web Tecnologies.</h1>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
-            </div>
-
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Web Development</span>
-              <span class="tag">Cloning</span>
-              <span class="tag">Project</span>
-            </div>
-          </div>
-        </a>
-        <!-- end of item -->
-
-
+      <div class="action">
+        <a href="/blog">Read More Articles in my Blog</a>
       </div>
     </div>
 
     <div class="footer section">
-      <h1>About Me</h1>
+      
+      <div>
+        <h1>About Me</h1>
+      </div>
+
+      <nav>
+        <ul class="links">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="contact">
+        <ul>
+          <li>github</li>
+          <li>gmail</li>
+          <li>linkedin</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>{{ .Site.Copyright }}</p>
+        <p>{{ .Site.Params.Footnotes }}</p>
+      </div>
+
     </div>
 
   </div>
