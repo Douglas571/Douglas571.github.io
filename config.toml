@@ -3,13 +3,14 @@ languageCode = 'en-us'
 title = 'Douglas Socorro'
 watch = true
 
+copyright = "Copyright © 2022 Douglas Socorro"
+
 [markup]
   [markup.highlight]
     noClasses=false
 
-copyright = "Copyright © 2022 Douglas Socorro"
-
-footnote = "This site was built with Hugo, Hosted and published with GitHub."
+[params]
+  
 
 styles = ['styles.css']
 

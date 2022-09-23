@@ -14,7 +14,7 @@
 
 </head>
 <body>
-  <div class="home-page">
+  <div tabindex="0" class="home-page">
 
     <div class="mobil-navbar">
       <div class="close-button">
@@ -52,6 +52,7 @@
     <div id="blog-section" class="blog-section section">
 
       <h1 class="title">Lates articles</h1>
+      
       <div class="blog-post-items">
         {{ range .Site.Sections }}
           {{ if eq .Title "Blog" }}
@@ -79,7 +80,7 @@
     </div>
 
     <div class="footer section">
-      
+      <!--
       <div>
         <h1>About Me</h1>
       </div>
@@ -99,10 +100,28 @@
           <li>linkedin</li>
         </ul>
       </div>
-
-      <div>
-        <p>{{ .Site.Copyright }}</p>
-        <p>{{ .Site.Params.Footnotes }}</p>
+      -->
+      <div class="note">
+        <p>
+          This site was built with <a class="link" href="https://gohugo.io">Hugo</a>, Hosted and published with <a class="link" href="https://github.com/Douglas571/Douglas571.github.io">GitHub</a>. Icons from <a class="link" href="https://Icons8.com">Icons8</a>.
+        </p>
+        <p class="copyright">{{ .Site.Copyright }}</p>
+      </div>
+      <div class="social">
+        <div>
+          <a href="https://github.com/douglas571">
+            {{ $github_svg := resources.Get "icons8-github.svg" }}
+            {{ $github_svg.Content | safeHTML }}
+          </a>
+        </div>
+        <!--
+        <div>
+          <a href="https://github.com/douglas571">
+            {{ $linkedin_svg := resources.Get "icons8-linkedin-circled.svg" }}
+            {{ $linkedin_svg.Content | safeHTML }}
+          </a>
+        </div>
+        -->
       </div>
 
     </div>
@@ -111,15 +130,14 @@
     
 </body>
 <script type="text/javascript">
+  const page = document.querySelector('.home-page')
+  const firstSection = document.querySelector('.first-section')
+  const blogSection = document.querySelector('#blog-section')
 
   const mobilNavbar = document.querySelector('.mobil-navbar')
   const menuOpenButton = document.querySelector('.open-mobil-navbar')
   const menuCloseButton = document.querySelector('.mobil-navbar .close-button')
 
-  const page = document.querySelector('.home-page')
-  const firstSection = document.querySelector('.first-section')
-  const blogSection = document.querySelector('#blog-section')
-  
   function addVisibleClass(el) {
     let className = el.getAttribute('class').split(' ')
 
