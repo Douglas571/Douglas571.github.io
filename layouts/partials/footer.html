@@ -1,0 +1,46 @@
+<div class="footer section">
+  <!--
+  <div>
+    <h1>About Me</h1>
+  </div>
+
+  <nav>
+    <ul class="links">
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact">
+    <ul>
+      <li>github</li>
+      <li>gmail</li>
+      <li>linkedin</li>
+    </ul>
+  </div>
+  -->
+  <div class="note">
+    <p>
+      This site was built with <a class="link" href="https://gohugo.io">Hugo</a>, Hosted and published with <a class="link" href="https://github.com/Douglas571/Douglas571.github.io">GitHub</a>. Icons from <a class="link" href="https://Icons8.com">Icons8</a>.
+    </p>
+    <p class="copyright">{{ .Site.Copyright }}</p>
+  </div>
+  <div class="social">
+    <div>
+      <a href="https://github.com/douglas571">
+        {{ $github_svg := resources.Get "icons8-github.svg" }}
+        {{ $github_svg.Content | safeHTML }}
+      </a>
+    </div>
+    <!--
+    <div>
+      <a href="https://github.com/douglas571">
+        {{ $linkedin_svg := resources.Get "icons8-linkedin-circled.svg" }}
+        {{ $linkedin_svg.Content | safeHTML }}
+      </a>
+    </div>
+    -->
+  </div>
+
+</div>
