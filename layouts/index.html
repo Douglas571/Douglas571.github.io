@@ -57,17 +57,20 @@
         {{ range .Site.Sections }}
           {{ if eq .Title "Blog" }}
             {{ range first 3 .Pages.ByDate.Reverse }}
+              
               {{ if eq .Draft false }}
-                <div class="item" href="{{ .Permalink }}">
-                  <div class="content">
-                    <div>
-                      <div class="date">{{ .Date.Format "2006-01-02" }}</div>  
-                      <h1 class="title">{{ .Title }}</h1> 
+                <div class="item">
+                  <a href="{{ .Permalink }}">
+                    <div class="content">
+                      <div>
+                        <div class="date">{{ .Date.Format "2006-01-02" }}</div>  
+                        <h1 class="title">{{ .Title }}</h1> 
+                      </div>
+                      <div><a href="{{ .Permalink }}" class="link">Read Article</a></div>
                     </div>
-                    <div><a href="{{ .Permalink }}">Read Article</a></div>
-                  </div>
+                  <!-- end of item -->
+                  </a>  
                 </div>
-                <!-- end of item -->
               {{ end }}
             {{ end }}
           {{ end}}

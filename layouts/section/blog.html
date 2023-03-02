@@ -6,10 +6,81 @@
   <title>
     Blog - Douglas Socorro
   </title>
+
+  {{ $reset_styles := resources.Get "reset.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $reset_styles.Permalink }}">
+
 </head>
 <body>
   <main>
-    <h1>Blog</h1>
+
+    <!-- header -->
+      <header>
+        <nav>
+          <a href="/">Douglas Socorro</a>
+
+          <a>Blog</a>
+
+          <a>Contact</a> 
+
+          <a>About</a>
+        </nav>
+        
+      </header>
+    <!-- hero -->
+    <section>
+      <h2>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nunc ut neque eleifend finibus. Fusce varius dolor nec suscipit ornare. Suspendisse vitae consectetur dolor. Morbi in sollicitudin nunc. Vestibulum ultrices orci at eleifend malesuada. Maecenas ac aliquam elit, in aliquam quam. Aliquam erat volutpat. Suspendisse finibus luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </h2>
+      <ul>
+        <li>
+          #Category
+        </li>
+        <li>
+          #Category
+        </li>
+        <li>
+          #Category
+        </li>
+      </ul>
+      <h4>on Wendsday, 15 February 2023</h4>
+    </section>
+
+    <!-- articles -->
+    <h2>
+      Latests Posts
+    </h2>
+
+    {{ range .Pages }}
+      {{ if eq .Draft false }}
+        <div>
+          <h3>
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </h3>
+          <ul>
+            <li>
+              #Category
+            </li>
+            <li>
+              #Category
+            </li>
+            <li>
+              #Category
+            </li>
+          </ul>
+          <h4>{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
+          <!-- <h4>on Wendsday, 15 February 2023</h4> -->
+        </div>    
+      {{ end }}
+    {{ end }}
+    
+    <!-- list of articles -->
+
+
+    <!-- footer -->
+    
 
     <section>
       <ul>
@@ -21,8 +92,8 @@
       </ul>
     </section>
 
+
     <section>
-      
       {{ range .Site.RegularPages }}
         <h4>{{ . }}</h4>
       {{ end }}
