@@ -10,25 +10,29 @@
   {{ $reset_styles := resources.Get "reset.css" | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $reset_styles.Permalink }}">
 
+  {{ $blog_index_styles := resources.Get "blog-index.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $blog_index_styles.Permalink}}">
+
 </head>
 <body>
   <main>
-
+    
     <!-- header -->
-      <header>
-        <nav>
-          <a href="/">Douglas Socorro</a>
+    <header id="header">
+      <nav>
+        <a href="/">Douglas Socorro</a>
 
-          <a>Blog</a>
+        <a>Blog</a>
 
-          <a>Contact</a> 
+        <a>Contact</a> 
 
-          <a>About</a>
-        </nav>
-        
-      </header>
+        <a>About</a>
+      </nav>
+      
+    </header>
     <!-- hero -->
-    <section>
+    <section id="hero">
+      <h4>on Wendsday, 15 February 2023</h4>
       <h2>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nunc ut neque eleifend finibus. Fusce varius dolor nec suscipit ornare. Suspendisse vitae consectetur dolor. Morbi in sollicitudin nunc. Vestibulum ultrices orci at eleifend malesuada. Maecenas ac aliquam elit, in aliquam quam. Aliquam erat volutpat. Suspendisse finibus luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       </h2>
@@ -43,7 +47,6 @@
           #Category
         </li>
       </ul>
-      <h4>on Wendsday, 15 February 2023</h4>
     </section>
 
     <!-- articles -->
@@ -54,6 +57,15 @@
     {{ range .Pages }}
       {{ if eq .Draft false }}
         <div>
+          {{ if eq .IsHome true }}
+            <h1>is home</h1>
+          {{ end }}
+
+          <h1>this is a {{ .Kind }} page</h1>
+
+
+          <h4>{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
+          <!-- <h4>on Wendsday, 15 February 2023</h4> -->
           <h3>
             <a href="{{ .Permalink }}">
               {{ .Title }}
@@ -70,8 +82,7 @@
               #Category
             </li>
           </ul>
-          <h4>{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
-          <!-- <h4>on Wendsday, 15 February 2023</h4> -->
+          
         </div>    
       {{ end }}
     {{ end }}
