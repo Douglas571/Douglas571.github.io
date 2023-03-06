@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>
-    Blog - Douglas Socorro
-  </title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree Serif|Roboto Slab">
 
   {{ $reset_styles := resources.Get "reset.css" | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $reset_styles.Permalink }}">
 
+  {{ $basic_styles := resources.Get "basic.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $basic_styles.Permalink }}">
+
   {{ $blog_index_styles := resources.Get "blog-index.css" | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $blog_index_styles.Permalink}}">
+
+  <title>
+    Blog - Douglas Socorro
+  </title>
 
 </head>
 <body>
@@ -19,73 +26,70 @@
     
     <!-- header -->
     <header id="header">
-      <nav>
-        <a href="/">Douglas Socorro</a>
-
-        <a>Blog</a>
-
-        <a>Contact</a> 
-
-        <a>About</a>
-      </nav>
+      
+      {{ partial "nav.html" . }}
       
     </header>
+
     <!-- hero -->
     <section id="hero">
-      <h4>on Wendsday, 15 February 2023</h4>
-      <h2>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nunc ut neque eleifend finibus. Fusce varius dolor nec suscipit ornare. Suspendisse vitae consectetur dolor. Morbi in sollicitudin nunc. Vestibulum ultrices orci at eleifend malesuada. Maecenas ac aliquam elit, in aliquam quam. Aliquam erat volutpat. Suspendisse finibus luctus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </h2>
-      <ul>
-        <li>
-          #Category
-        </li>
-        <li>
-          #Category
-        </li>
-        <li>
-          #Category
-        </li>
-      </ul>
-    </section>
-
-    <!-- articles -->
-    <h2>
-      Latests Posts
-    </h2>
-
-    {{ range .Pages }}
-      {{ if eq .Draft false }}
+      <a href="#">
         <div>
-          {{ if eq .IsHome true }}
-            <h1>is home</h1>
-          {{ end }}
-
-          <h1>this is a {{ .Kind }} page</h1>
-
-
-          <h4>{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
-          <!-- <h4>on Wendsday, 15 February 2023</h4> -->
-          <h3>
-            <a href="{{ .Permalink }}">
-              {{ .Title }}
-            </a>
-          </h3>
-          <ul>
-            <li>
+          <h4 class="date">on Wendsday, 15 February 2023</h4>
+          <h2 class="title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nunc ut neque eleifend finibus fusce varius.
+          </h2>
+          <ul class="tags">
+            <li class="item">
               #Category
             </li>
-            <li>
+            <li class="item">
               #Category
             </li>
-            <li>
+            <li class="item">
               #Category
             </li>
           </ul>
-          
-        </div>    
+        </div>
+      </a>
+      
+    </section>
+
+    <!-- articles -->
+    
+    <section id="articles">
+      <h2 class="title">
+        Latests Posts
+      </h2>
+
+      {{ range .Pages }}
+        {{ if eq .Draft false }}
+          <a href="{{ .Permalink }}">
+            <div class="article-card item">
+
+              <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
+              <!-- <h4>on Wendsday, 15 February 2023</h4> -->
+              <h1 class="title">{{ .Title }}</h1>
+              <!-- <ul>
+                <li>
+                  #Category
+                </li>
+                <li>
+                  #Category
+                </li>
+                <li>
+                  #Category
+                </li>
+              </ul> -->
+            </div>    
+          </a>
+        {{ end }}
       {{ end }}
-    {{ end }}
+    </section>
+
+    
+
+    
     
     <!-- list of articles -->    
 
