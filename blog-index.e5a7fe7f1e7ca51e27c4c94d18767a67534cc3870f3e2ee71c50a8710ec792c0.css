@@ -1,0 +1,79 @@
+/* general */
+html {
+  font-size: 10px;
+  font-family: "Roboto Slab", sans-serif;
+
+  
+}
+
+/* the title font family
+font-family: "Bree Serif", Serif; */
+
+/* header */
+#header {
+  
+  background-color: var(--main-color);
+}
+/* hero */
+#hero {
+  padding: 2rem;
+  
+  color: #f3f3f3;
+  background-color: var(--main-color);
+}
+
+#hero .date {
+  margin-bottom: 1rem;
+
+  font-size: 1.5rem;
+
+  font-weight: bold;
+}
+
+#hero .title {
+  margin-bottom: 2rem;
+
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+#hero .tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  font-size: 2rem;
+}
+
+#hero .tags .item {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* articles */
+#articles {
+  padding: 1.5rem;
+}
+
+#articles > .title {
+  padding: 2rem;
+
+  font-size: 3rem;
+  text-align: center;
+}
+
+#articles .item {
+  margin-bottom: 2rem;
+  padding: 1rem;
+
+  border: 1px solid gray;  
+  border-top: 0.5rem solid var(--main-color);
+}
+
+#articles .item .date {
+  font-size: 1rem;
+}
+
+#articles .item .title {
+  font-size: 2rem;
+}
