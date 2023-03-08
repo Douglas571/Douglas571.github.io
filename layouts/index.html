@@ -141,6 +141,7 @@
   const menuOpenButton = document.querySelector('.open-mobil-navbar')
   const menuCloseButton = document.querySelector('.mobil-navbar .close-button')
 
+  // util functions to add visible class to html elements
   function addVisibleClass(el) {
     let className = el.getAttribute('class').split(' ')
 
@@ -158,6 +159,18 @@
     el.setAttribute('class', newClassName)  
   }
 
+  // Open and close de mobile menu
+  menuOpenButton.addEventListener('click', evt => {
+    console.log('open menu')
+    addVisibleClass(mobilNavbar)
+  })
+
+  menuCloseButton.addEventListener('click', evt => {
+    console.log('close menu')
+    removeVisibleClass(mobilNavbar)
+  })
+
+  // add visible class to the articles elements when are visible
   page.addEventListener('scroll', (evt) => {
     const wh = window.innerHeight
 
@@ -170,14 +183,6 @@
     }
   })
 
-  menuOpenButton.addEventListener('click', evt => {
-    console.log('open menu')
-    addVisibleClass(mobilNavbar)
-  })
 
-  menuCloseButton.addEventListener('click', evt => {
-    console.log('close menu')
-    removeVisibleClass(mobilNavbar)
-  })
 </script>
 </html>

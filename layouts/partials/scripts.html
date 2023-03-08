@@ -1,0 +1,2 @@
+{{ $basic_scripts := resources.Get "scripts.js" | resources.Fingerprint }}
+<script src="{{ $basic_scripts.Permalink }}"></script>
