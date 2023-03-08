@@ -41,7 +41,7 @@
     
     <section id="hero">
       {{ range first 1 .Pages }}
-        <div>
+        <div class="container">
           <a href="{{ .Permalink }}">
             <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
             <h2 class="title">
@@ -68,38 +68,41 @@
     <!-- articles -->
     
     <section id="articles-section">
-      <div class="header">
-        <h2 class="title">
-          Latests Posts
-        </h2>
-      </div>
+      <div class="container">
+        <div class="header">
+          <h2 class="title">
+            Latests Posts
+          </h2>
+        </div>
 
-      <div>
-        {{ range .Pages }}
-          {{ if eq .Draft false }}
-            <a href="{{ .Permalink }}">
-              <article class="article-card item">
+        <div>
+          {{ range .Pages }}
+            {{ if eq .Draft false }}
+              <a href="{{ .Permalink }}">
+                <article class="article-card item">
 
-                <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
-                <!-- <h4>on Wendsday, 15 February 2023</h4> -->
-                <h1 class="title">{{ .Title }}</h1>
-                <!-- <ul>
-                  <li>
-                    #Category
-                  </li>
-                  <li>
-                    #Category
-                  </li>
-                  <li>
-                    #Category
-                  </li>
-                </ul> -->
-              </article>    
-            </a>
+                  <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
+                  <!-- <h4>on Wendsday, 15 February 2023</h4> -->
+                  <h1 class="title">{{ .Title }}</h1>
+                  <!-- <ul>
+                    <li>
+                      #Category
+                    </li>
+                    <li>
+                      #Category
+                    </li>
+                    <li>
+                      #Category
+                    </li>
+                  </ul> -->
+                </article>    
+              </a>
+            {{ end }}
           {{ end }}
-        {{ end }}
+        </div>
       </div>
     </section>
+    
 
     <!-- footer -->
     {{ partial "footer.html" . }}

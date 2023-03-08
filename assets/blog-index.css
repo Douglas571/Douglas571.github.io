@@ -17,6 +17,9 @@ font-family: "Bree Serif", Serif; */
 /* hero */
 #hero {
   padding: 2rem;
+
+  display: flex;
+  justify-content: center;
   
   color: #f3f3f3;
   background-color: var(--main-color);
@@ -53,13 +56,14 @@ font-family: "Bree Serif", Serif; */
 /* articles */
 #articles-section {
   padding: 1.5rem;
+
+  display: flex;
+  justify-content: center;
 }
 
-#articles-section > .header > .title {
-  padding: 2rem;
-
+#articles-section  .header > .title {
   font-size: 3rem;
-  text-align: center;
+  text-align: left;
 }
 
 #articles-section .item {
@@ -79,12 +83,17 @@ font-family: "Bree Serif", Serif; */
 }
 
 @media screen and (min-width: 600px) and (max-width: 9999px) {
-  #articles-section {
+  #articles-section .container {
     display: flex;
   }
 
-  #articles-section > .header{
+  #articles-section .header{
     min-width: 230px;
 
   }
+}
+
+
+.container {
+  min-width: 90%;
 }
