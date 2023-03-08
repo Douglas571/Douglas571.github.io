@@ -2,11 +2,11 @@ const mobilNavbar = document.querySelector('.mobil-navbar')
 const menuOpenButton = document.querySelector('.open-mobil-navbar')
 const menuCloseButton = document.querySelector('.mobil-navbar .close-button')
 
-const page = document.querySelector('.page')
 const firstSection = document.querySelector('.first-section')
 const blogSection = document.querySelector('#blog-section')
 
 function addVisibleClass(el) {
+  console.log({el})
   let className = el.getAttribute('class').split(' ')
 
   if (!className.includes('visible')) {
@@ -22,18 +22,6 @@ function removeVisibleClass(el) {
   const newClassName = className.filter( c => c !== 'visible').join(' ')
   el.setAttribute('class', newClassName)  
 }
-
-page.addEventListener('scroll', (evt) => {
-  const wh = window.innerHeight
-
-  const blogSectionY = blogSection.getBoundingClientRect().y
-  const y = (wh - 200)
-  console.log({blogSectionY, y})
-  if (blogSectionY < y) {
-    
-    addVisibleClass(blogSection)
-  }
-})
 
 menuOpenButton.addEventListener('click', evt => {
   console.log('open menu')
