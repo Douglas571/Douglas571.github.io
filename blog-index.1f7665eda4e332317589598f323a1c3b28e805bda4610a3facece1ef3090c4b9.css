@@ -62,8 +62,10 @@ font-family: "Bree Serif", Serif; */
 }
 
 #articles-section  .header > .title {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   font-size: 3rem;
-  text-align: left;
+  text-align: center;
 }
 
 #articles-section .item {
@@ -90,6 +92,12 @@ font-family: "Bree Serif", Serif; */
   #articles-section .header{
     min-width: 230px;
 
+  }
+
+  #articles-section  .header > .title {
+    margin-top: 0;
+    font-size: 3rem;
+    text-align: left;
   }
 }
 
