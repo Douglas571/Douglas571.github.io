@@ -30,41 +30,42 @@
 <body>
   <main>
     
+    <div id="main-hero-head">
     <!-- header -->
-    <header id="header">
-      
-      {{ partial "nav.html" . }}
-      
-    </header>
+      <header id="header">
+        
+        {{ partial "nav.html" . }}
+        
+      </header>
 
-    <!-- hero -->
-    
-    <section id="hero">
-      {{ range first 1 .Pages }}
-        <div class="container">
-          <a href="{{ .Permalink }}">
-            <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
-            <h2 class="title">
-              {{ .Title }}
-            </h2>
-          </a>
+      <!-- hero -->
+      <section id="hero">
+        
+        {{ range first 1 .Pages }}
+          <div class="container">
+            <a href="{{ .Permalink }}">
+              <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
+              <h2 class="title">
+                {{ .Title }}
+              </h2>
+            </a>
 
-          <!-- <ul class="tags">
-            <li class="item">
-              #Category
-            </li>
-            <li class="item">
-              #Category
-            </li>
-            <li class="item">
-              #Category
-            </li>
-          </ul> -->
-        </div>
-      {{ end }}
-      
-    </section>
-
+            <!-- <ul class="tags">
+              <li class="item">
+                #Category
+              </li>
+              <li class="item">
+                #Category
+              </li>
+              <li class="item">
+                #Category
+              </li>
+            </ul> -->
+          </div>
+        {{ end }}
+        
+      </section>
+    </div>
     <!-- articles -->
     
     <section id="articles-section">
