@@ -16,11 +16,11 @@ font-family: "Bree Serif", Serif; */
 }
 /* hero */
 #hero {
-  padding: 2rem;
-
   display: flex;
-  justify-content: center;
-  
+  justify-content: center;  
+
+  padding-top: 8rem;
+  padding-bottom: 6rem;
   color: #f3f3f3;
   background-color: var(--main-color);
 }
@@ -55,25 +55,25 @@ font-family: "Bree Serif", Serif; */
 
 /* articles */
 #articles-section {
-  padding: 1.5rem;
-
   display: flex;
   justify-content: center;
+
+  padding-bottom: 20rem;
 }
 
 #articles-section  .header > .title {
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-size: 3rem;
   text-align: center;
 }
 
 #articles-section .item {
   margin-bottom: 2rem;
-  padding: 1rem;
+  padding-bottom: 6rem;
 
-  border: 1px solid gray;  
-  border-top: 0.5rem solid var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  
 }
 
 #articles-section .item .date {
@@ -81,17 +81,31 @@ font-family: "Bree Serif", Serif; */
 }
 
 #articles-section .item .title {
+  margin-bottom: 3rem;
   font-size: 2.5rem;
 }
 
-@media screen and (min-width: 600px) and (max-width: 9999px) {
+.container {
+  width: 80%;
+}
+
+@media screen and (min-width: 700px) and (max-width: 9999px) {
+  #hero {
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+  }
+
+  #hero .title {
+    font-size: 8rem;
+  }
+
   #articles-section .container {
+    margin-top: 5rem;
     display: flex;
   }
 
   #articles-section .header{
     min-width: 230px;
-
   }
 
   #articles-section  .header > .title {
@@ -99,9 +113,8 @@ font-family: "Bree Serif", Serif; */
     font-size: 3rem;
     text-align: left;
   }
-}
 
-
-.container {
-  min-width: 90%;
+  .container {
+    width: 70%;
+  }
 }
