@@ -40,7 +40,7 @@
     <!-- hero -->
     
     <section id="hero">
-      {{ range first 1 .Pages }}
+      {{ range first 1 (sort .Pages "Date") }}
         <div class="container">
           <a href="{{ .Permalink }}">
             <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
@@ -49,7 +49,7 @@
             </h2>
           </a>
 
-          <ul class="tags">
+          <!-- <ul class="tags">
             <li class="item">
               #Category
             </li>
@@ -59,7 +59,7 @@
             <li class="item">
               #Category
             </li>
-          </ul>
+          </ul> -->
         </div>
       {{ end }}
       
@@ -81,9 +81,10 @@
               <a href="{{ .Permalink }}">
                 <article class="article-card item">
 
-                  <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
-                  <!-- <h4>on Wendsday, 15 February 2023</h4> -->
+                  
+                  
                   <h1 class="title">{{ .Title }}</h1>
+                  <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
                   <!-- <ul>
                     <li>
                       #Category
