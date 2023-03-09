@@ -10,13 +10,17 @@ html {
 font-family: "Bree Serif", Serif; */
 
 #main-hero-head {
-  background-color: var(--main-color);
+  background-image: url("/texture_2.jpg");
+  
+  
 }
 
 /* header */
 #header {
-  
+  background-color: var(--main-color);
+  mix-blend-mode: multiply;
 }
+
 /* hero */
 #hero {
   display: flex;
@@ -25,6 +29,9 @@ font-family: "Bree Serif", Serif; */
   padding-top: 8rem;
   padding-bottom: 6rem;
   color: #f3f3f3;
+
+  background-color: var(--main-color);
+  mix-blend-mode: multiply;
 }
 
 #hero .date {
@@ -40,6 +47,7 @@ font-family: "Bree Serif", Serif; */
 
   font-size: 4rem;
   font-weight: bold;
+  mix-blend-mode: none;
 }
 
 #hero .tags {
