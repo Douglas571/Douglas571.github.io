@@ -9,10 +9,13 @@ html {
 /* the title font family
 font-family: "Bree Serif", Serif; */
 
+#main-hero-head {
+  background-color: var(--main-color);
+}
+
 /* header */
 #header {
   
-  background-color: var(--main-color);
 }
 /* hero */
 #hero {
@@ -22,7 +25,6 @@ font-family: "Bree Serif", Serif; */
   padding-top: 8rem;
   padding-bottom: 6rem;
   color: #f3f3f3;
-  background-color: var(--main-color);
 }
 
 #hero .date {
