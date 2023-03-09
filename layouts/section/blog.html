@@ -40,7 +40,7 @@
     <!-- hero -->
     
     <section id="hero">
-      {{ range first 1 (sort .Pages "Date") }}
+      {{ range first 1 .Pages }}
         <div class="container">
           <a href="{{ .Permalink }}">
             <h4 class="date">{{ .Date.Format "on Monday, 2 January 2006" }}</h4>
