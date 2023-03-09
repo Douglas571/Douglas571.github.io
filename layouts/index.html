@@ -11,6 +11,8 @@
   {{ $styles := resources.Get "styles.css" | resources.Fingerprint }}
   <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}">
   
+  {{ $footer_styles := resources.Get "footer.css" | resources.Fingerprint }}
+  <link rel="stylesheet" type="text/css" href="{{ $footer_styles.Permalink }}">
 
 </head>
 <body>
