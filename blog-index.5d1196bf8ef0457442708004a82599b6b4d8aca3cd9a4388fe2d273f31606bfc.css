@@ -11,15 +11,36 @@ font-family: "Bree Serif", Serif; */
 
 #main-hero-head {
   background-image: url("/texture_2.jpg");
-  
+  isolation: isolate;
   
 }
 
 /* header */
-#header {
-  background-color: var(--main-color);
-  mix-blend-mode: multiply;
+#header, #hero {
+  
+  position: relative;
 }
+
+#hero {
+  position: relative;
+}
+
+#header::after, #hero::after {
+  content: '';
+  position: absolute;
+  background-color: var(--main-color);
+  inset: 0;
+  
+  z-index: -1;
+  mix-blend-mode: hard-light;
+  
+
+}
+
+
+
+
+
 
 /* hero */
 #hero {
@@ -29,9 +50,6 @@ font-family: "Bree Serif", Serif; */
   padding-top: 8rem;
   padding-bottom: 6rem;
   color: #f3f3f3;
-
-  background-color: var(--main-color);
-  mix-blend-mode: multiply;
 }
 
 #hero .date {
