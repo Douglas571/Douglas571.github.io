@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'Douglas Socorro'
 watch = true
 
+theme = "nightfall"
+
 copyright = "Copyright © 2022 Douglas Socorro"
 
 [markup]
@@ -10,7 +12,31 @@ copyright = "Copyright © 2022 Douglas Socorro"
     noClasses=false
 
 [params]
-  
+  author = "Douglas Socorro"
+  user = "douglas571"
+  hostname = "https://douglas571.github.io/"
+
+[[params.social]]
+  key = 0
+  name = "github"
+  url = "https://github.com/douglas571"
+
+[menu]
+  [[menu.header]]
+    name = "blog"
+    weight = 5
+    url = "/blog"
+
+  [[menu.header]]
+    name = "about"
+    weight = 0
+    url = "/about"
+
+  [[menu.header]]
+    name = "cv"
+    weight = 0
+    url = "/douglas_socorro_cv.pdf"
+
 
 styles = ['styles.css']
 
